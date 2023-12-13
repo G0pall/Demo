@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            function prime()
+            {
+            var num = parseInt(document.getElementById('numbox').value) ;
+            var flag = true ;
+            var res = document.getElementById('res');
+
+            for( var x=2 ; x < num ; x++ )
+            {
+                if(num%x==0){
+
+                res.innerText = " !! Not a Prime number !! ";
+                flag=false;
+                break ;
+                }
+            }   
+            if (flag)
+            {
+                res.innerText = " !! Prime Number !!";
+            }
+            }
+</script>
+    </head>
+    <body>
+        <input type="text" id="numbox" placeholder="Number">
+        <br><br>
+        <b> RESULT : <span id="res"></span></b>
+        <br><br>
+        <button onclick="prime()">CHECK</button>
+    </body>
+</html>
